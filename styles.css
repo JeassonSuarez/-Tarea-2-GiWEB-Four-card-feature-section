@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+:root{
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --VeryDarkBlue: hsl(234, 12%, 34%);
+    --GrayishBlue: hsl(229, 6%, 66%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    font-weight: 800;
+    margin: 25px auto;
+    text-align: center;
+}
+
+header>p:nth-child(2){
+    display: block;
+    width: fit-content;
+    margin: auto;
+}
+
+header>p:first-child{
+    font-weight: 400;
+    display: block;
+    width: fit-content;
+    margin: auto;
+}
+
+header>p:nth-child(3), header>p:last-child{
+    font-weight: 200;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+}
+
+.card{
+    border: 0.5px solid rgb(153, 153, 153);
+    margin: 25px;
+    box-shadow: 1px 1px 15px rgba(128, 128, 128, 0.377);
+    height: fit-content;
+    border-radius: 5px;
+}
+
+section>div:first-child{
+    border-top: 5px solid var(--Cyan);
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+section>div:last-child{
+    border-top: 5px solid var(--Blue);
+    grid-column-start: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.card:nth-child(2){
+    border-top: 5px solid var(--Red);
+
+}
+
+.card:nth-child(3){
+    border-top: 5px solid var(--Orange);
+}
+
+.title-card{
+    font-weight: 800;
+    margin-top: 0;
+}
+
+.card{
+    padding: 25px;
+}
+
+figure{
+    margin: 0;
+    text-align: right;
+}
+
+@media (max-width:375px) {
+    section{
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+    }
+
+    .card:nth-child(1){
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    .card:nth-child(2){
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    .card:nth-child(3){
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    .card:nth-child(4){
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    header>p:last-child{
+        text-align: center;
+    }
+}
